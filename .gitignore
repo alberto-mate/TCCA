@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+*$py.class
+save_dir/
+datasets/
+logs/
+wandb/
+.DS_Store
+*.swp

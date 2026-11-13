@@ -1,0 +1,50 @@
+program: run_wandb.py
+method: grid
+parameters: 
+  batch_size:
+    values: [16]
+  epochs:
+    values: [50]
+  n_decoder_layer:
+    values: [2]
+  n_encoder_layer:
+    values: [2]
+  hidden_dim:
+    values: [64]
+  hidden_dim_decoder:
+    values: [128]
+  segmentation_loss:
+    values: ["cross_entropy+tmse"]
+  seed:
+    values: [13452]  
+  model:
+    values: ["tcca_LTC"]
+  dropout:
+    values: [0.3]
+  sample_rate:
+    values: [3]
+  anticipate_next:
+    values: [True]
+  anticipate_prev:
+    values: [True]
+  weight_decay:
+    values: [0.005]
+  activation:
+    values: ["gelu"]
+  crf:
+    values: [True]
+  tsme_seg_weight:
+    values: [0.2]
+  crf_transition_weight:
+    values: [0.1]
+  ltc_num_stages:
+    values: [4]
+  ltc_long_term_attn_g:
+    values: [16] 
+  clip_grad_norm:
+    values: [10]
+  duration:
+    values: ["action_partially_dependent"] 
+  ablation:
+    values:  ["","n_breakfast_A", "n_breakfast_B", "n_breakfast_C", "n_breakfast_D"]
+    
